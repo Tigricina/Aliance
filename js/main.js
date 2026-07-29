@@ -1,5 +1,8 @@
 const navbar = document.querySelector(".navbar");
 const logo = document.querySelector(".logo-svg use");
+const menuToggle = document.querySelector(".mobile-menu-toggle");
+const menu = document.querySelector('.mobile-menu');
+
 window.addEventListener("scroll", () => {
     if (this.scrollY > 1) {
         navbar.classList.add("navbar-light");

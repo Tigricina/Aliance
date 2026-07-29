@@ -8,44 +8,75 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
     <title>Aliance Production</title>
 </head>
 
 <body>
+    <div class="mobile-menu">
+        <ul class="mobile-menu-nav">
+            <li class="mobile-nav-item"><a href="./about.html" class="mobile-nav-link">О компании</a></li>
+            <li class="mobile-nav-item"><a href="./about.html" class="mobile-nav-link">Контрактное производство</a>
+                <ul class="mobile-submenu">
+                    <li class="mobile-submenu-item"><a href="">Автомобильная химия</a></li>
+                    <li class="mobile-submenu-item"><a href="">Бытовая химия</a></li>
+                    <li class="mobile-submenu-item"><a href="">Дезинфицирующие средства</a></li>
+                    <li class="mobile-submenu-item"><a href="">Пищевые аэрозоли</a></li>
+                    <li class="mobile-submenu-item"><a href="">Косметическая продукция</a></li>
+                    <li class="mobile-submenu-item"><a href="">Краски аэрозольные</a></li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item"><a href="./services.html" class="mobile-nav-link">Собственные торговые
+                    марки</a></li>
+            <li class="mobile-nav-item"><a href="./news.html" class="mobile-nav-link">Новости</a></li>
+            <li class="mobile-nav-item"><a href="./contact.html" class="mobile-nav-link">Контакты</a></li>
+        </ul>
+    </div>
+    <nav class="navbar">
+        <a href="#" class="mobile-menu-toggle">
+            <div class="mobile-menu-line"></div>
+            <div class="mobile-menu-line"></div>
+            <div class="mobile-menu-line"></div>
+        </a>
+        <a href="./" class="header-logo">
+            <svg class="logo-svg">
+                <use xlink:href="img/sprite.svg#logo-light"></use>
+            </svg>
 
+        </a>
+        <ul class="header-nav">
+            <li class="header-nav-item"><a href="./about.html" class="header-nav-link">О компании</a></li>
+            <li class="header-nav-item"><a href="./about.html" class="header-nav-link">Контрактное производство</a>
+            </li>
+            <li class="header-nav-item"><a href="./services.html" class="header-nav-link">Собственные торговые
+                    марки</a></li>
+            <li class="header-nav-item"><a href="./news.html" class="header-nav-link">Новости</a></li>
+            <li class="header-nav-item"><a href="./contact.html" class="header-nav-link">Контакты</a></li>
+        </ul>
+        <div class="header-phone">
+            <svg class="phone-icon" width="24" height="24">
+                <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+            <a href="tel:+74996861014" class="header-phone-link">+7 (499) 686-10-14</a>
+        </div>
+        <!-- /.header-phone -->
+        <button class="navbar-button button">
+            <svg class="игеещт-icon" width="24" height="24">
+                <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+            <span class="button-text">Получить консультацию</span>
+        </button>
+    </nav>
+    <!-- /.navbar -->
     <header class="header header-image">
-        <nav class="navbar">
-            <a href="./" class="header-logo">
-                <svg class="logo-svg">
-                    <use xlink:href="img/sprite.svg#logo-light"></use>
-                </svg>
 
-            </a>
-            <ul class="header-nav">
-                <li class="header-nav-item"><a href="./about.html" class="header-nav-link">О компании</a></li>
-                <li class="header-nav-item"><a href="./about.html" class="header-nav-link">Контрактное производство</a>
-                </li>
-                <li class="header-nav-item"><a href="./services.html" class="header-nav-link">Собственные торговые
-                        марки</a></li>
-                <li class="header-nav-item"><a href="./news.html" class="header-nav-link">Новости</a></li>
-                <li class="header-nav-item"><a href="./contact.html" class="header-nav-link">Контакты</a></li>
-            </ul>
-            <div class="header-phone">
-                <svg class="phone-icon" width="24" height="24">
-                    <use xlink:href="img/sprite.svg#phone"></use>
-                </svg>
-                <a href="tel:+74996861014" class="header-phone-link">+7 (499) 686-10-14</a>
-            </div>
-            <!-- /.header-phone -->
-            <button class="navbar-button button">Получить консультацию</button>
-        </nav>
-        <!-- /.navbar -->
+
         <div class="container">
             <div class="header-content">
                 <div class="seporator"></div>
-                <h1 class="header-title">Комплексное обеспечение товарами и расходными материалами бизнеса</h1>
+                <h1 class="header-title">Комплексное обеспечение товарами и расходными материалами бизнеса</h1>
                 <p class="header-text">Высокий уровень вовлечения представителей целевой аудитории является четким
                     доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от
                     анализа существующих паттернов поведения.</p>

@@ -17,10 +17,13 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+.mobile-menu {
+    display: none;
+}
+
 .container {
     max-width: 90rem;
     margin: auto;
-
 }
 
 .navbar {
@@ -41,6 +44,10 @@ body {
     background-color: #FFFFFF;
     color: #292D33;
     height: 4.5rem;
+}
+
+.phone-icon {
+    fill="#5C8EE6"
 }
 
 .logo-svg {
@@ -126,19 +133,21 @@ body {
     border: none;
     display: inline-block;
     cursor: pointer;
-
 }
 
 .navbar-button {
     flex-shrink: 0;
     height: 100%;
-    padding: 10px 55px;
+    padding: .625rem 3.4375rem;
+}
 
-
+.navbar-button .button-icon {
+    display: block;
 }
 
 .header-button {
-    /*height: 100%;*/
+    height: 100%;
+    /*в 3м уроке этого паддинга на видео нет, а высота есть, хотя в предыдущем высоты не было*/
     padding: 1.625rem 3.75rem;
 }
 
@@ -284,7 +293,7 @@ body {
     margin-right: 1.25rem;
 }
 
-/*
+
 @media (max-width: 1700px) {
     html {
         font-size: 14px;
@@ -293,8 +302,139 @@ body {
     .header-image {
         background-position: center;
     }
-} 
-    */
+}
+
+@media (max-width: 1460px) {
+    html {
+        font-size: 13px;
+    }
+
+    .header-logo {
+        padding: 2rem;
+
+    }
+
+    .logo-svg {
+        max-width: 6rem;
+    }
+
+    .header-nav {
+        padding-left: 2rem;
+    }
+
+    .header-nav-item:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    .header-phone {
+        margin-right: 2rem;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 70rem;
+    }
+
+    .header-phone {
+        display: none;
+    }
+
+    .navbar {
+        height: 5rem;
+    }
+
+    .navbar-button {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 12px;
+    }
+
+    .container {
+        max-width: 60rem;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .header-logo {
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    .mobile-menu-toggle {
+        width: 80px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.8rem;
+        border-right: 1px solid rgba(235, 235, 240, 0.2);
+    }
+
+    .navbar-light .mobile-menu-line {
+        background-color: #333;
+    }
+
+    .mobile-menu-line {
+        height: 1px;
+        background-color: #fff;
+        width: 100%;
+
+    }
+
+    .mobile-menu-line:nth-child(2) {
+        width: 80%;
+    }
+
+    .navbar-button .button-text {
+        display: none;
+    }
+
+    .navbar-button .button-icon {
+        display: block;
+        fill: #ffffff;
+    }
+
+    .mobile-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        z-index: 2;
+        background-color: #fff;
+        padding-top: 5rem;
+        padding-left: 0.9rem;
+        padding-right: 0.9rem;
+    }
+
+    .mobile-menu.is-open {
+        display: block;
+    }
+
+    .mobile-menu-nav {
+        list-style: none;
+        padding: 0;
+    }
+
+    .mobile-menu-link {
+        text-decoration: none;
+    }
+}
+
+
 
 
 @media (min-width: 1200px) and (max-width: 1920px) {
