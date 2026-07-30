@@ -1,6 +1,6 @@
 const navbar = document.querySelector(".navbar");
 const logo = document.querySelector(".logo-svg use");
-const menuToggle = document.querySelector(".mobile-menu-toggle");
+const mMenuToggle = document.querySelector(".mobile-menu-toggle");
 const menu = document.querySelector('.mobile-menu');
 
 window.addEventListener("scroll", () => {
@@ -11,4 +11,9 @@ window.addEventListener("scroll", () => {
         navbar.classList.remove("navbar-light");
         logo.href.baseVal = "img/sprite.svg#logo-light";
     }
+})
+mMenuToggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    menu.classList.toggle('is-open');
+
 })
