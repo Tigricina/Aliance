@@ -389,10 +389,21 @@ body {
         height: 1px;
         background-color: #fff;
         width: 100%;
+        transition: transform 0.2s;
     }
 
     .mobile-menu-line:nth-child(2) {
         width: 80%;
+    }
+
+    .navbar-button {
+        width: 80px;
+        height: 100%;
+        padding: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .navbar-button .button-text {
@@ -405,7 +416,7 @@ body {
     }
 
     .mobile-menu {
-        display: block;
+        display: none;
         position: fixed;
         top: 0;
         right: 0;
@@ -484,5 +495,18 @@ body {
         font-size: 14px;
         line-height: 160%;
         color: #292d33;
+    }
+
+    .close-menu .mobile-menu-line:nth-child(2) {
+        display: none;
+    }
+
+    .close-menu .mobile-menu-line:nth-child(1) {
+        transform: rotate(45deg) translateY(9px);
+
+    }
+
+    .close-menu .mobile-menu-line:nth-child(3) {
+        transform: rotate(-45deg) translateY(-9px);
     }
 }
