@@ -47,7 +47,7 @@ body {
 }
 
 .phone-icon {
-    fill="#5C8EE6"
+    fill: #5C8EE6;
 }
 
 .logo-svg {
@@ -128,7 +128,8 @@ body {
     font-size: 1rem;
     line-height: 160%;
     color: #FFFFFF;
-    background: #3A71D1;
+    /* background: #3A71D1;*/
+    background: #5C8EE5;
     padding: 1.5625rem 3.75rem;
     border: none;
     display: inline-block;
@@ -141,8 +142,9 @@ body {
     padding: .625rem 3.4375rem;
 }
 
+
 .navbar-button .button-icon {
-    display: block;
+    display: none;
 }
 
 .header-button {
@@ -387,7 +389,6 @@ body {
         height: 1px;
         background-color: #fff;
         width: 100%;
-
     }
 
     .mobile-menu-line:nth-child(2) {
@@ -471,7 +472,7 @@ body {
         display: flex;
         align-items: center;
         gap: 1rem;
-        margin-top: 1.5rem;
+        /*margin-top: 1.5rem;*/
         margin-bottom: 1rem;
     }
 
