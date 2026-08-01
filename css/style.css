@@ -198,14 +198,17 @@ body {
 .header-features-item {
     min-height: 100%;
 
-    padding: 1.875rem 3.125rem;
+    padding: 1.75rem 3.125rem;
     width: 18rem;
     border: 1px solid rgba(235, 235, 240, 0.2);
 }
 
-.slider-button {
-    display: none;
+.slider-buttons {
+    display: flex;
+
+
     height: 44px;
+
 }
 
 .slider-button-prev,
@@ -214,9 +217,11 @@ body {
     flex-basis: 50%;
     border: 1px solid rgba(235, 235, 240, 0.2);
     display: flex;
+
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
 }
 
 .header-features-text {
@@ -368,8 +373,9 @@ body {
         padding-right: 2rem;
     }
 
-    .slider-button {
+    .slider-buttons {
         display: flex;
+        height: 44px;
     }
 }
 
@@ -550,11 +556,19 @@ body {
         max-width: 90%;
     }
 
+    .header {
+        min-height: auto;
+    }
+
     .header-title {
         font-size: 2rem;
     }
 
     .header-content {
         padding-top: 3rem;
+    }
+
+    .header-features {
+        margin-top: 2rem;
     }
 }
