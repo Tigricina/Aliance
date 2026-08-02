@@ -187,6 +187,14 @@ body {
     height: 100%;
 }
 
+.swiper-wrapper {
+    align-items: stretch;
+}
+
+.swiper-slide {
+    height: auto !important;
+}
+
 .header-features {
     display: flex;
     align-items: stretch;
@@ -195,14 +203,14 @@ body {
     list-style: none;
     color: #FFFFFF;
     position: relative;
-    height: 3rem;
+
 }
 
 .header-features-item {
     display: flex;
+    flex-direction: column;
     padding: 1.75rem 3.125rem;
-    height: 100%;
-    width: 18rem;
+
     border: 1px solid rgba(235, 235, 240, 0.2);
 }
 
