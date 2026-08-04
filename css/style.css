@@ -432,6 +432,51 @@ body {
     margin-top: 1.25rem;*/
 }
 
+.brands {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    border: 1px solid #EBEBF0;
+    text-decoration: none;
+    color: inherit;
+    min-height: 220px;
+    background: #fff;
+}
+
+.brand-image {
+    width: 200px;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: contain;
+    padding: 40px;
+    border-right: 1px solid #EBEBF0;
+}
+
+.brand-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.brand-title {
+    margin: 0 0 16px;
+    font-family: "bebas neue book";
+    font-size: 28px;
+    color: #292D33;
+}
+
+.brand-text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 160%;
+    color: #828A99;
+}
+
 @media (max-width: 1700px) {
     html {
         font-size: 14px;
