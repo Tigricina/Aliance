@@ -243,8 +243,6 @@ body {
     margin-top: 1.125rem;
 }
 
-
-
 .section {
     margin-top: 9.375rem;
     margin-bottom: 9.375rem;
@@ -321,8 +319,24 @@ body {
     height: 1px;
     background: #5C8EE5;
     width: 40px;
-    /*в уроках по rem нет этого марджина*/
-    margin-right: 1.25rem;
+
+}
+
+.steps-buttons {
+    display: none;
+    height: 40px;
+    justify-content: flex-end;
+}
+
+.steps-button-prev,
+.steps-button-next {
+    background: #5C8EE5;
+    height: 100%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 
@@ -383,6 +397,10 @@ body {
     }
 
     .slider-buttons {
+        display: flex;
+    }
+
+    .steps-buttons {
         display: flex;
 
     }
