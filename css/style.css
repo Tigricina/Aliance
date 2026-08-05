@@ -123,8 +123,6 @@ body {
     position: relative;
 }
 
-
-
 .header-nav-link:after {
     content: '';
     width: 0;
@@ -433,48 +431,78 @@ body {
 }
 
 .brands {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 50px;
+    display: flex;
+    gap: 1.875rem;
 }
 
 .brand {
+    flex: 1;
     display: flex;
     align-items: center;
+    gap: 2.5rem;
+
+    padding: 3rem;
     border: 1px solid #EBEBF0;
+
     text-decoration: none;
-    color: inherit;
-    min-height: 220px;
-    background: #fff;
+    transition: .3s;
 }
 
-.brand-image {
-    width: 200px;
-    height: 100%;
+/* Логотип */
+
+.brand-logo {
     flex-shrink: 0;
-    object-fit: contain;
-    padding: 40px;
-    border-right: 1px solid #EBEBF0;
+    width: 180px;
+    height: auto;
 }
+
+.brand-logo-hover {
+    display: none;
+}
+
+/* Текст */
 
 .brand-content {
     flex: 1;
-    padding: 40px;
 }
 
 .brand-title {
-    margin: 0 0 16px;
+    margin: 0 0 1rem;
+
     font-family: "bebas neue book";
-    font-size: 28px;
+    font-size: 2rem;
+    font-weight: 400;
     color: #292D33;
+
+    transition: .3s;
 }
 
 .brand-text {
     margin: 0;
-    font-size: 16px;
+
+    font-size: 1rem;
     line-height: 160%;
     color: #828A99;
+}
+
+/*=========================
+        Hover
+=========================*/
+
+.brand:hover {
+    border-color: #5C8EE6;
+}
+
+.brand:hover .brand-title {
+    color: #5C8EE6;
+}
+
+.brand:hover .brand-logo-default {
+    display: none;
+}
+
+.brand:hover .brand-logo-hover {
+    display: block;
 }
 
 @media (max-width: 1700px) {
@@ -703,7 +731,13 @@ body {
     .close-menu .mobile-menu-line:nth-child(3) {
         transform: rotate(-45deg) translateY(-9px);
     }
+
+    .brands {
+        flex-direction: column;
+    }
+
 }
+
 
 @media (max-width: 760px) {
     .container {
@@ -753,6 +787,35 @@ body {
     .steps-item {
         flex: 0 0 85%;
         margin-right: 1rem;
+    }
+
+
+    .brand {
+        padding: 2rem;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .brand-logo {
+        width: 110px;
+    }
+
+    .brand-content {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .brand-title {
+        margin: 0;
+        font-size: 1.6rem;
+    }
+
+    .brand-text {
+        flex-basis: 100%;
+        margin-top: 1rem;
     }
 
 }
