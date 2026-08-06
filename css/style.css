@@ -526,7 +526,7 @@ body {
     }
 
     .logo-svg {
-        max-width: 6rem;
+        max-width: 10rem;
     }
 
     .header-nav {
@@ -553,12 +553,12 @@ body {
     }
 
     .navbar {
-        height: 5rem;
+        height: 5.8rem;
     }
 
     .navbar-button {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 2.3rem;
+        padding-right: 2.3rem;
     }
 
     .slider-buttons {
@@ -591,6 +591,11 @@ body {
         flex-grow: 1;
         justify-content: center;
         padding: 0;
+        border: none;
+    }
+
+    .logo-svg {
+        max-width: 10rem;
     }
 
     .mobile-menu-toggle {
@@ -599,7 +604,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 1.8rem;
+        padding: 2.3rem 2.5rem;
         border-right: 1px solid rgba(235, 235, 240, 0.2);
     }
 
@@ -749,7 +754,7 @@ body {
     }
 
     .header-content {
-        padding-top: 3rem;
+        padding-top: 4rem;
     }
 
     .card {
@@ -762,20 +767,37 @@ body {
         max-width: 90%;
     }
 
+    .logo-svg {
+        width: 10rem;
+        height: 3rem;
+    }
+
     .header {
         min-height: auto;
     }
 
     .header-title {
-        font-size: 2rem;
+        margin: 1.25rem;
+        margin-left: 0;
     }
 
-    .header-content {
-        padding-top: 3rem;
+    .header-text {
+        font-size: 14px;
+        margin-bottom: 30px;
+
     }
 
     .header-features {
         margin-top: 2rem;
+    }
+
+    .header-button {
+
+        width: 100%;
+    }
+
+    .seporator {
+        width: 8.130rem;
     }
 
     .steps {
@@ -817,5 +839,6 @@ body {
         flex-basis: 100%;
         margin-top: 1rem;
     }
+
 
 }
