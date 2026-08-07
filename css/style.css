@@ -560,31 +560,20 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    filter: grayscale(100%);
+}
+
+.clients-logo-item:hover {
+    filter: grayscale(0%);
 }
 
 .clients-logo {
     max-width: 100%;
     width: 70px;
     height: 70px;
-    filter: grayscale(100%);
-    transition: filter 0.2s;
 }
 
-.client-logo:hover {
 
-    filter: grayscale(0%);
-}
-
-.client-logo img {
-    max-width: 120px;
-    max-height: 70px;
-    opacity: .5;
-    transition: .2s;
-}
-
-.client-logo:hover img {
-    opacity: 1;
-}
 
 @media (max-width: 1700px) {
     html {
