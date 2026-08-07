@@ -334,28 +334,6 @@ body {
     margin-bottom: 1.25rem;
 }
 
-.steps-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 160%;
-    color: #5C8EE5;
-}
-
-.steps-link::before {
-    content: '';
-    height: 1px;
-    background: #5C8EE5;
-    width: 40px;
-    margin-right: 1rem;
-}
-
-.steps-link:hover:before {
-    width: 60px;
-}
-
 .steps-buttons {
     display: none;
     height: 40px;
@@ -371,6 +349,29 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.button-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 160%;
+    color: #5C8EE5;
+}
+
+.button-link:before {
+    content: '';
+    height: 1px;
+    background: #5C8EE5;
+    width: 40px;
+    margin-right: 1rem;
+    transition: width 0.2s;
+}
+
+.button-link:hover:before {
+    width: 60px;
 }
 
 .cards {
@@ -426,7 +427,6 @@ body {
     left: 0;
     right: 0;
     z-index: 0;
-
 }
 
 .trademark-cards {
@@ -434,7 +434,6 @@ body {
 }
 
 .trademark-card {
-
     flex-basis: 50%;
     text-decoration: none;
     border: 1px solid #ebebf0;
@@ -447,17 +446,14 @@ body {
     grid-template-areas:
         "logo title title"
         "logo text text";
-
 }
 
 .trademark-card-logo {
     width: 100%;
     fill: #828a99;
     grid-area: logo;
-
     /*height: auto;
     max-width: 10rem;*/
-
 }
 
 .trademark-card-title {
@@ -491,10 +487,104 @@ body {
     color: #5C8EE5;
 }
 
+.founder {
+    /*background-image: url('../img/founder.jpg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 40%;*/
+    min-height: 41.25rem;
+    position: relative;
+}
 
+.founder-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
 
+.founder-content {
+    max-width: 45rem;
+}
 
+.founder-content-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
 
+.founder-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 160%;
+    color: #828a99;
+}
+
+.clients-wrapper {
+    display: flex;
+    gap: 3.125rem;
+}
+
+.clients-content {
+    flex-basis: 50%;
+}
+
+.clients-list {
+    list-style: none;
+    padding: 0;
+    columns: 2 auto;
+}
+
+.clients-list-item {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 160%;
+    color: #292D33;
+}
+
+.clients-logo-list {
+    flex-shrink: 10;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.clients-logo-item {
+    flex-basis: 33%;
+    border: 1px solid #EBEBF0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.clients-logo {
+    max-width: 100%;
+    width: 70px;
+    height: 70px;
+    filter: grayscale(100%);
+    transition: filter 0.2s;
+}
+
+.client-logo:hover {
+
+    filter: grayscale(0%);
+}
+
+.client-logo img {
+    max-width: 120px;
+    max-height: 70px;
+    opacity: .5;
+    transition: .2s;
+}
+
+.client-logo:hover img {
+    opacity: 1;
+}
 
 @media (max-width: 1700px) {
     html {
@@ -567,6 +657,15 @@ body {
     .trademark-card {
         grid-template-columns: auto auto;
     }
+
+    .founder-content {
+        max-width: 35rem;
+    }
+
+    .clients-content {
+        flex-basis: 60%;
+
+    }
 }
 
 @media (max-width: 992px) {
@@ -622,7 +721,6 @@ body {
         width: 80px;
         height: 100%;
         padding: 0;
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -725,7 +823,6 @@ body {
 
     .close-menu .mobile-menu-line:nth-child(1) {
         transform: rotate(45deg) translateY(9px);
-
     }
 
     .close-menu .mobile-menu-line:nth-child(3) {
@@ -733,6 +830,10 @@ body {
     }
 
     .trademark-cards {
+        flex-direction: column;
+    }
+
+    .clients-wrapper {
         flex-direction: column;
     }
 
@@ -754,6 +855,12 @@ body {
 
     .card {
         flex-basis: 100%;
+    }
+
+    .founder-photo {
+        position: relative;
+        width: 100%;
+        margin-bottom: 3.125rem;
     }
 }
 
@@ -779,7 +886,6 @@ body {
     .header-text {
         font-size: 14px;
         margin-bottom: 30px;
-
     }
 
     .header-features {
@@ -787,7 +893,6 @@ body {
     }
 
     .header-button {
-
         width: 100%;
     }
 
@@ -812,5 +917,11 @@ body {
             "text text";
     }
 
+    .clients-list {
+        columns: 1;
+    }
 
+    .clients-logo-item {
+        flex-basis: 50%;
+    }
 }
