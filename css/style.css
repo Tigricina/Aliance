@@ -985,4 +985,11 @@ body {
     .clients-logo-item {
         flex-basis: 50%;
     }
+
+    .blog-slider-footer {
+        margin-top: 2.5rem;
+    }
+
+
+
 }
