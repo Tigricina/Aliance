@@ -639,9 +639,20 @@ body {
     justify-content: space-between;
 }
 
+
 .bg-grey {
     background: #f0f2f5;
     position: relative;
+    padding: 0 2rem;
+    /* боковые отступы */
+}
+
+.bg-grey {
+    background: #f0f2f5;
+    position: relative;
+    padding: 0 3rem;
+    /* боковые отступы */
+    box-sizing: border-box;
 }
 
 .section-cta {
@@ -659,14 +670,25 @@ body {
     width: 50%;
 }
 
-.cta-from-wrapper {
+.cta-form-wrapper {
     display: flex;
     justify-content: flex-end;
 }
 
 .cta-form {
     max-width: 51.25rem;
+    margin: 0 0;
+    margin-right: 15rem;
+    /* центрирование */
 }
+
+
+/*
+.cta-form {
+    max-width: 51.25rem;
+    margin-left: 50%;
+    /* сдвигает форму вправо */
+
 
 .cta-form-text {
     font-style: normal;
@@ -737,7 +759,14 @@ body {
 .cta-form-footer {
     display: flex;
     margin-top: 1.25rem;
+
+    align-items: flex-start;
+    gap: 3rem;
+    /* расстояние между кнопкой и уведомлением */
+
 }
+
+
 
 .cta-form-button {
     flex-shrink: 0;
@@ -751,6 +780,8 @@ body {
 
 .notify-icon {
     flex-shrink: 0;
+    width: 24px;
+    height: 24px;
 }
 
 .notify-text {
