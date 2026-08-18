@@ -1088,6 +1088,40 @@ body {
 
 }
 
+.hero-title.background {
+
+    color: #fff;
+}
+
+.hero-background {
+    position: relative;
+    background: url('../img/blog/blog_photo_2.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero--background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+}
+
+.hero--background .container {
+    position: relative;
+    z-index: 2;
+
+}
+
+.breadcrumbs.background {
+    color: #fff;
+}
+
+.breadcrumbs.background .hero-link {
+    color: #fff;
+}
 
 
 @media (max-width: 1700px) {
