@@ -1,8 +1,8 @@
     <!-- /.call to action-->
     <section class="cta">
-        <div class="bg-grey">
+        <div class="bg-grey section-cta">
             <img src="img/cta.png" alt="call to action" class="cta-image" />
-            <div class="cta-form-wrapper">
+            <div class="cta-form-wrapper container">
                 <form action="handler.php" method="POST" class="cta-form">
                     <h2 class="section-title cta-form-title">Хотите сотрудничать?</h2>
                     <p class="cta-form-text">
@@ -14,20 +14,20 @@
                             <input id="user-name" type="text" class="input" 
                             name="username"
                             placeholder=" " />
-                            <label for="user-name">Имя</label>
+                            <label class="input-group-label" for="user-name">Имя</label>
                         </div>
                         <!-- /.input-group -->
                         <div class="input-group">
                             <input id="user-phone" type="tel" class="input"  
                             name="userphone"
                              placeholder=" "  />
-                            <label for="user-phone">Номер телефона</label>
+                            <label class="input-group-label" for="user-phone">Номер телефона</label>
                         </div>
                         <!-- /.input-group -->
 
-
                     </div>
                     <!-- /.input-group-wrapper -->
+
                     <div class="cta-form-footer">
                         <button type="submit" class="button cta-form-button">Отправить заявку</button>
                         <div class="notify">
