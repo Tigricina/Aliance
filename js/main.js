@@ -132,27 +132,28 @@ const swiperBlog = new Swiper('.blog-slider', {
 
 
 
-const modalToggle = document.querySelectorAll('[data-toggle=modal]')
-const modalClose = document.querySelector(".modal-close");
-
-
 const modal = document.querySelector(".modal");
 const modalDialog = document.querySelector(".modal-dialog");
 
 document.addEventListener("click", (event) => {
-    if (
-        event.target.dataset.toggle == "modal" ||
-        event.target.parentNode.dataset.toggle == "modal" ||
-        (!event.composedPath().includes(modalDialog) &&
-            modal.classList.contains("is-open"))
-    ) {
+    // 1. Проверяем, кликнули ли по кнопке открытия (data-toggle="modal")
+    const isToggleBtn = event.target.closest('[data-toggle="modal"]');
+
+    // 2. Проверяем, кликнули ли по крестику закрытия (.modal-close)
+    const isCloseBtn = event.target.closest('.modal-close');
+
+    // 3. Проверяем клик по темному фону (оверлею) вне диалога
+    const isBackdropClick = modal.classList.contains("is-open") &&
+        !event.composedPath().includes(modalDialog);
+
+    if (isToggleBtn || isCloseBtn || isBackdropClick) {
         event.preventDefault();
         modal.classList.toggle("is-open");
     }
 });
 
 document.addEventListener("keyup", (event) => {
-    if (event.key == "Escape" && modal.classList.contains("is-open")) {
-        modal.classList.toggle("is-open");
+    if (event.key === "Escape" && modal.classList.contains("is-open")) {
+        modal.classList.remove("is-open");
     }
 });
