@@ -158,6 +158,13 @@ document.addEventListener("keyup", (event) => {
     }
 });
 
+document.querySelectorAll('[name="userphone"]').forEach((input) => {
+    IMask(input, {
+        mask: '+{7} (000) 000-00-00',
+        lazy: false,
+        placeholderChar: '_'
+    });
+});
 
 const forms = document.querySelectorAll("form");
 
@@ -182,6 +189,11 @@ forms.forEach((form) => {
             {
                 rule: "required",
                 errorMessage: "Укажите телефон",
+            },
+            {
+                rule: "customRegexp",
+                value: /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
+                errorMessage: "Введите номер в формате +7 (999) 123-45-67"
             }
         ])
         .onSuccess((event) => {
