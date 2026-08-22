@@ -18,8 +18,9 @@
                         </div>
                         <!-- /.input-group -->
                         <div class="input-group">
-                            <input id="user-phone" type="tel" class="input"                             name="userphone"
-                             placeholder=" "  />
+                            <input id="user-phone" type="tel" class="input"                            
+                            name="userphone"
+                            placeholder=" "  />
                             <label class="input-group-label" for="user-phone">Номер телефона</label>
                         </div>
                         <!-- /.input-group -->
@@ -173,3 +174,62 @@
 
 
     </footer>
+
+    <div class="modal">
+        <div class="modal-dialog">
+            <h2 class="modal-title">Есть вопросы?</h2>
+            <a href="#" class="modal-close">
+                <svg class="modal-close-icon" width="24" height="24">
+                    <use href="img/sprite.svg#close"></use>
+                </svg>
+            </a>
+            <p class="modal-text">
+                Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время,
+                ответит на все интересующие вопросы и поможет даже в самых сложных случаях!
+            </p>
+
+
+            <form action="handler.php" method="POST" class="modal-form">
+
+                <div class="input-group-wrapper input-group-vertical">
+                    <div class="input-group modal-input-group">
+                        <input id="modal-user-name" type="text" class="input modal-input" placeholder=" " 
+                        name ="username"/>
+                        <label class="input-group-label modal-input-label" for="user-name">Имя</label>
+                    </div>
+                    <!-- /.input-group -->
+                    <div class="input-group modal-input-group">
+                        <input id="modal-user-phone" type="tel" class="input modal-input" placeholder=" " 
+                        name ="userphone"/>
+                        <label class="input-group-label modal-input-label" for="user-phone">Номер телефона</label>
+                    </div>
+                    <!-- /.input-group -->
+
+
+                </div>
+                <!-- /.input-group-wrapper -->
+                <div class="modal-form-footer">
+                    <button type="submit" class="button modal-form-button">Отправить заявку</button>
+                    <div class="notify">
+                        <svg class="notify-icon">
+                            <use href="img/sprite.svg#shield"></use>
+                        </svg>
+                        <p class="notify-text">
+                            Обращаясь к нам вы получаете не только профессиональную работу, но и абсолютную
+                            конфиденциальность информации!
+                        </p>
+                    </div>
+                </div>
+
+            </form>
+
+
+
+        </div>
+    </div>
+
+    
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/just-validate.production.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="./js/main.js"></script>

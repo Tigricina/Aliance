@@ -7,8 +7,8 @@ if (empty($user_name) || empty($user_phone)) {
   exit;
 }
 
-$token = "bla";
-$chat_id = "bla";
+$token = "8914982747:AAHPtvOCZuyFjUbwJ9a8ZmBUUWiRwi_AE14";
+$chat_id = "60244207";
 
 $text = "Новая заявка с сайта!\n";
 $text .= "Клиент: " . $user_name . "\n";
