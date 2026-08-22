@@ -228,7 +228,35 @@
         </div>
     </div>
 
-    
+
+
+<!-- Модальное окно успешной отправки -->
+<div class="modal modal-success" id="successModal">
+    <div class="modal-dialog modal-success-dialog">
+        <a href="#" class="modal-close">
+            <svg class="modal-close-icon" width="24" height="24">
+                <use href="img/sprite.svg#close"></use>
+            </svg>
+        </a>
+        
+        <div class="modal-success-content">
+            <!-- Картинка успеха -->
+            <div class="modal-success-image-wrapper">
+                <img src="./img/thanks.png" alt="Заявка отправлена" class="modal-success-image">
+            </div>
+            
+            <h2 class="modal-title">СПАСИБО ЗА ЗАЯВКУ!</h2>
+            
+            <p class="modal-text">
+                Наш менеджер свяжется с Вами в ближайшее время, ответит на все интересующие вопросы и поможет даже в самых сложных случаях!
+            </p>
+            
+            <button type="button" class="button modal-form-button">Вернуться на главную</button>
+        </div>
+    </div>
+</div>
+
+
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/just-validate.production.min.js"></script>
     <script src="https://unpkg.com/imask"></script>

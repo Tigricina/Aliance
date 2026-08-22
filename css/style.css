@@ -945,6 +945,7 @@ body {
     background-color: rgba(40, 45, 51, 0.5);
     z-index: 10;
     display: flex;
+    text-align: left;
 
 }
 
@@ -968,6 +969,7 @@ body {
     transform: translateY(-10%);
     opacity: 0;
     transition: transform 0.3s, opacity 0.3s;
+    text-align: left;
 }
 
 .modal-close {
@@ -992,6 +994,8 @@ body {
     color: #292d33;
     margin-top: 0;
     margin-bottom: 20px;
+    text-align: left;
+
 }
 
 .modal-text {
@@ -1001,6 +1005,8 @@ body {
     line-height: 160%;
     color: #828a99;
     margin-bottom: 30px;
+    text-align: left;
+
 }
 
 .modal-input-group {
@@ -1016,6 +1022,83 @@ body {
     width: 100%;
     margin-bottom: 24px;
 }
+
+
+/* ===== МОДАЛЬНОЕ ОКНО УСПЕХА ===== */
+.modal-success {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40, 45, 51, 0.5);
+    z-index: 1000;
+    display: flex;
+    transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+}
+
+.modal-success.is-open {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-success.is-open .modal-success-dialog {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-success-dialog {
+    background: #FFFFFF;
+    margin: auto;
+    max-width: 460px;
+    padding: 2.5rem 3.125rem;
+    position: relative;
+    text-align: center;
+    transform: translateY(-10%);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Переопределяем позиционирование крестика для модалки успеха */
+.modal-success .modal-close {
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Картинка успеха */
+.modal-success-image-wrapper {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-success-image {
+    max-width: 100%;
+    height: 310px;
+    display: block;
+    margin: 40px 50px 30px;
+    /* max-height: 120px; */
+
+}
+
+/* Переопределяем размер заголовка */
+.modal-success-title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+/* Переопределяем отступ текста */
+.modal-success-text {
+    margin-bottom: 30px;
+}
+
 
 .hero-text-only {
 

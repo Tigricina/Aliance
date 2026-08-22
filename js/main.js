@@ -166,6 +166,7 @@ document.querySelectorAll('[name="userphone"]').forEach((input) => {
     });
 });
 
+
 const forms = document.querySelectorAll("form");
 
 forms.forEach((form) => {
@@ -197,24 +198,83 @@ forms.forEach((form) => {
             }
         ])
         .onSuccess((event) => {
-            const thisForm = event.target; // наша форма
-            const formData = new FormData(thisForm); // данные из нашей формы
-            const ajaxSend = (formData) => {
-                fetch(thisForm.getAttribute("action"), {
-                    method: thisForm.getAttribute("method"),
-                    body: formData,
-                }).then((response) => {
-                    if (response.ok) {
+            const thisForm = event.target;
+            const formData = new FormData(thisForm);
+
+            fetch(thisForm.getAttribute("action"), {
+                method: thisForm.getAttribute("method"),
+                body: formData,
+            })
+                .then((response) => response.text())
+                .then((data) => {
+                    if (data.trim() === "Success") {
                         thisForm.reset();
-                        alert("Форма успешно отправлена!");
+
+                        if (modal && modal.classList.contains("is-open")) {
+                            modal.classList.remove("is-open");
+                        }
+
+                        showSuccessModal();
                     } else {
-                        alert("Ошибка. Текст ошибки: ".response.statusText);
+                        alert("Ошибка при отправке. Попробуйте позже.");
                     }
+                })
+                .catch((error) => {
+                    console.error("Ошибка:", error);
+                    alert("Произошла ошибка при отправке. Попробуйте позже.");
                 });
-            };
-            ajaxSend(formData);
+        })
+
+});
 
 
-        });
 
+const successModal = document.querySelector(".modal-success");
+const successModalDialog = document.querySelector(".modal-success-dialog");
+function showSuccessModal() {
+    if (successModal) {
+        successModal.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+    }
+}
+
+function hideSuccessModal() {
+    if (successModal) {
+        successModal.classList.remove("is-open");
+        document.body.style.overflow = "";
+    }
+}
+
+// Закрытие по крестику
+document.addEventListener("click", (event) => {
+    const isCloseBtn = event.target.closest('.modal-close');
+    if (isCloseBtn && successModal && successModal.classList.contains("is-open")) {
+        event.preventDefault();
+        hideSuccessModal();
+    }
+});
+
+// Закрытие по клику на фон
+document.addEventListener("click", (event) => {
+    if (successModal && successModal.classList.contains("is-open")) {
+        const isBackdropClick = !event.composedPath().includes(successModalDialog);
+        if (isBackdropClick) {
+            hideSuccessModal();
+        }
+    }
+});
+
+// Закрытие по ESC
+document.addEventListener("keyup", (event) => {
+    if (event.key === "Escape" && successModal && successModal.classList.contains("is-open")) {
+        hideSuccessModal();
+    }
+});
+
+// Кнопка "Вернуться на главную"
+document.addEventListener("click", (event) => {
+    const isHomeBtn = event.target.closest('.modal-form-button');
+    if (isHomeBtn && successModal && successModal.classList.contains("is-open")) {
+        window.location.href = "/";
+    }
 });
