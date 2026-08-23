@@ -5,7 +5,6 @@ const mMenuToggle = document.querySelector(".mobile-menu-toggle");
 const menu = document.querySelector(".mobile-menu");
 const isFront = document.body.classList.contains("front-page");
 
-
 const lightModeOn = (event) => {
     navbar.classList.add("navbar-light");
 };
@@ -19,17 +18,15 @@ const changeNavHeight = (height) => {
 };
 
 const openMenu = (event) => {
-    //функция открывания меню
-    menu.classList.add("is-open");  //вешает класс is-open
+    menu.classList.add("is-open");
     mMenuToggle.classList.add("close-menu");
-    document.body.style.overflow = "hidden";  //запрещает прокрутку сайта под меню
+    document.body.style.overflow = "hidden";
     lightModeOn();
 }
 const closeMenu = (event) => {
-    //функция закрывания меню
-    menu.classList.remove("is-open");  //убирает класс is-open
+    menu.classList.remove("is-open");
     mMenuToggle.classList.remove("close-menu");
-    document.body.style.overflow = "";  //возвращает прокрутку сайта под меню
+    document.body.style.overflow = "";
     lightModeOff();
 }
 
@@ -40,12 +37,8 @@ window.addEventListener("scroll", () => {
     }
 });
 
-
-
 mMenuToggle.addEventListener("click", (event) => {
     event.preventDefault();
-    //menu.classList.toggle("is-open");
-    //openMenu();
     menu.classList.contains('is-open') ? closeMenu() : openMenu();
 });
 
@@ -57,28 +50,17 @@ const swiperSteps = new Swiper('.steps-slider', {
         prevEl: '.steps-button-prev',
     },
     breakpoints: {
-        // when window width is >= 320px
-
         576: {
             slidesPerView: 2,
-
-
         },
-        // when window width is >= 480px
         760: {
             slidesPerView: 3
-
         },
-        // when window width is >= 640px
         1024: {
             slidesPerView: 4
-
         },
-
     }
-
 });
-
 
 const swiper = new Swiper('.features-slider', {
     speed: 400,
@@ -88,41 +70,29 @@ const swiper = new Swiper('.features-slider', {
         prevEl: '.slider-button-prev',
     },
     breakpoints: {
-        // when window width is >= 320px
-
         576: {
             slidesPerView: 2,
-
-
         },
-        // when window width is >= 480px
         760: {
             slidesPerView: 3
-
         },
-        // when window width is >= 640px
         1024: {
             slidesPerView: 4
-
         },
         1200: {
             slidesPerView: 5
-
         }
     }
-
 });
 
 const swiperBlog = new Swiper('.blog-slider', {
     speed: 400,
     slidesPerView: 1,
     spaceBetween: 30,
-
     navigation: {
         nextEl: '.blog-button-next',
         prevEl: '.blog-button-prev',
     },
-
     breakpoints: {
         760: {
             slidesPerView: 2
@@ -130,33 +100,128 @@ const swiperBlog = new Swiper('.blog-slider', {
     }
 });
 
+// ============================================
+// МОДАЛЬНОЕ ОКНО "ЕСТЬ ВОПРОСЫ?" (ПЕРВАЯ МОДАЛКА)
+// ============================================
 
+const modal = document.querySelector(".modal:not(.modal-success)");
+const modalDialog = document.querySelector(".modal:not(.modal-success) .modal-dialog");
 
-const modal = document.querySelector(".modal");
-const modalDialog = document.querySelector(".modal-dialog");
-
+// Открытие/закрытие первой модалки
 document.addEventListener("click", (event) => {
-    // 1. Проверяем, кликнули ли по кнопке открытия (data-toggle="modal")
+    // Проверяем, кликнули ли по кнопке открытия
     const isToggleBtn = event.target.closest('[data-toggle="modal"]');
 
-    // 2. Проверяем, кликнули ли по крестику закрытия (.modal-close)
+    // Проверяем, кликнули ли по крестику
     const isCloseBtn = event.target.closest('.modal-close');
 
-    // 3. Проверяем клик по темному фону (оверлею) вне диалога
-    const isBackdropClick = modal.classList.contains("is-open") &&
-        !event.composedPath().includes(modalDialog);
+    // Проверяем, открыта ли модалка успеха - если да, то игнорируем
+    const successModal = document.querySelector(".modal-success");
+    if (successModal && successModal.classList.contains("is-open")) {
+        return;
+    }
 
-    if (isToggleBtn || isCloseBtn || isBackdropClick) {
+    if (isToggleBtn) {
         event.preventDefault();
-        modal.classList.toggle("is-open");
+        if (modal) {
+            modal.classList.add("is-open");
+            document.body.style.overflow = "hidden";
+        }
+    }
+
+    if (isCloseBtn && modal && modal.classList.contains("is-open")) {
+        event.preventDefault();
+        modal.classList.remove("is-open");
+        document.body.style.overflow = "";
     }
 });
 
-document.addEventListener("keyup", (event) => {
-    if (event.key === "Escape" && modal.classList.contains("is-open")) {
-        modal.classList.remove("is-open");
+// Закрытие первой модалки по клику на фон (только если клик НЕ по инпуту)
+document.addEventListener("click", (event) => {
+    if (modal && modal.classList.contains("is-open")) {
+        // Проверяем, что клик был по фону, а не по содержимому модалки
+        const isDialog = event.target.closest('.modal-dialog');
+        const isInput = event.target.closest('input, textarea, select, button');
+
+        // Если клик не по диалогу И не по инпуту - закрываем
+        if (!isDialog && !isInput) {
+            modal.classList.remove("is-open");
+            document.body.style.overflow = "";
+        }
     }
 });
+
+// Закрытие первой модалки по ESC
+document.addEventListener("keyup", (event) => {
+    if (event.key === "Escape") {
+        const successModal = document.querySelector(".modal-success");
+        if (successModal && successModal.classList.contains("is-open")) {
+            // Если открыта модалка успеха - закрываем её
+            successModal.classList.remove("is-open");
+            document.body.style.overflow = "";
+            return;
+        }
+
+        if (modal && modal.classList.contains("is-open")) {
+            modal.classList.remove("is-open");
+            document.body.style.overflow = "";
+        }
+    }
+});
+
+// ============================================
+// МОДАЛЬНОЕ ОКНО УСПЕХА (ВТОРАЯ МОДАЛКА)
+// ============================================
+
+const successModal = document.querySelector(".modal-success");
+const successModalDialog = document.querySelector(".modal-success .modal-dialog");
+
+function showSuccessModal() {
+    if (successModal) {
+        successModal.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+    }
+}
+
+function hideSuccessModal() {
+    if (successModal) {
+        successModal.classList.remove("is-open");
+        document.body.style.overflow = "";
+    }
+}
+
+// Закрытие модалки успеха по крестику
+document.addEventListener("click", (event) => {
+    const isCloseBtn = event.target.closest('.modal-close');
+    if (isCloseBtn && successModal && successModal.classList.contains("is-open")) {
+        event.preventDefault();
+        hideSuccessModal();
+    }
+});
+
+// Закрытие модалки успеха по клику на фон (только если клик НЕ по инпуту)
+document.addEventListener("click", (event) => {
+    if (successModal && successModal.classList.contains("is-open")) {
+        const isDialog = event.target.closest('.modal-dialog');
+        const isInput = event.target.closest('input, textarea, select, button');
+
+        if (!isDialog && !isInput) {
+            hideSuccessModal();
+        }
+    }
+});
+
+// Кнопка "Вернуться на главную" в модалке успеха
+document.addEventListener("click", (event) => {
+    const isHomeBtn = event.target.closest('.modal-form-button');
+    if (isHomeBtn && successModal && successModal.classList.contains("is-open")) {
+        window.location.href = "/";
+    }
+});
+
+// ============================================
+// МАСКА ТЕЛЕФОНА
+// ============================================
 
 document.querySelectorAll('[name="userphone"]').forEach((input) => {
     IMask(input, {
@@ -166,6 +231,9 @@ document.querySelectorAll('[name="userphone"]').forEach((input) => {
     });
 });
 
+// ============================================
+// ВАЛИДАЦИЯ И ОТПРАВКА ФОРМ
+// ============================================
 
 const forms = document.querySelectorAll("form");
 
@@ -210,10 +278,12 @@ forms.forEach((form) => {
                     if (data.trim() === "Success") {
                         thisForm.reset();
 
+                        // Закрываем первую модалку
                         if (modal && modal.classList.contains("is-open")) {
                             modal.classList.remove("is-open");
                         }
 
+                        // Открываем модалку успеха
                         showSuccessModal();
                     } else {
                         alert("Ошибка при отправке. Попробуйте позже.");
@@ -223,58 +293,5 @@ forms.forEach((form) => {
                     console.error("Ошибка:", error);
                     alert("Произошла ошибка при отправке. Попробуйте позже.");
                 });
-        })
-
-});
-
-
-
-const successModal = document.querySelector(".modal-success");
-const successModalDialog = document.querySelector(".modal-success-dialog");
-function showSuccessModal() {
-    if (successModal) {
-        successModal.classList.add("is-open");
-        document.body.style.overflow = "hidden";
-    }
-}
-
-function hideSuccessModal() {
-    if (successModal) {
-        successModal.classList.remove("is-open");
-        document.body.style.overflow = "";
-    }
-}
-
-// Закрытие по крестику
-document.addEventListener("click", (event) => {
-    const isCloseBtn = event.target.closest('.modal-close');
-    if (isCloseBtn && successModal && successModal.classList.contains("is-open")) {
-        event.preventDefault();
-        hideSuccessModal();
-    }
-});
-
-// Закрытие по клику на фон
-document.addEventListener("click", (event) => {
-    if (successModal && successModal.classList.contains("is-open")) {
-        const isBackdropClick = !event.composedPath().includes(successModalDialog);
-        if (isBackdropClick) {
-            hideSuccessModal();
-        }
-    }
-});
-
-// Закрытие по ESC
-document.addEventListener("keyup", (event) => {
-    if (event.key === "Escape" && successModal && successModal.classList.contains("is-open")) {
-        hideSuccessModal();
-    }
-});
-
-// Кнопка "Вернуться на главную"
-document.addEventListener("click", (event) => {
-    const isHomeBtn = event.target.closest('.modal-form-button');
-    if (isHomeBtn && successModal && successModal.classList.contains("is-open")) {
-        window.location.href = "/";
-    }
+        });
 });
