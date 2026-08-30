@@ -13,6 +13,13 @@ html {
     font-weight: normal;
 }
 
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("../fonts/BebasNeueRegular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
     font-family: 'Noto Sans', sans-serif;
 }
@@ -1104,9 +1111,8 @@ body {
 
     text-align: left;
     background: #F0F2F5;
-
     min-height: 270px;
-
+    color: #292D33;
 }
 
 .container.hero {
@@ -1120,7 +1126,7 @@ body {
 
     position: relative;
     z-index: 1;
-    color: #FFFFFF;
+
 
 }
 
@@ -1130,7 +1136,7 @@ body {
     line-height: 120%;
     margin-top: 1.875rem;
     margin-bottom: 2.75rem;
-    color: #292D33;
+
 }
 
 .breadcrumbs {
@@ -1138,8 +1144,6 @@ body {
     font-family: "Noto Sans", sans-serif;
     font-size: .875rem;
     line-height: 120%;
-
-    color: #292D33;
 }
 
 .hero-link {
@@ -1147,6 +1151,9 @@ body {
     text-decoration: none;
 }
 
+.hero-with-image {
+    background: #F0F2F5;
+}
 
 .container.hero.hero-with-image {
     display: grid;
@@ -1160,6 +1167,7 @@ body {
     /* обрезаем всё, что выходит за рамки */
     position: relative;
     padding-right: 90px;
+
 
 }
 
@@ -1179,10 +1187,6 @@ body {
 
 }
 
-.hero-title.background {
-
-    color: #fff;
-}
 
 .hero-background {
     position: relative;

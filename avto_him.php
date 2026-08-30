@@ -15,46 +15,7 @@
 </head>
 
 <body>
-    <div class="mobile-menu">
-        <ul class="mobile-menu-nav">
-            <li class="mobile-menu-nav-item">
-                <a href="./about.php" class="mobile-menu-link">О компании</a>
-            </li>
-            <li class="mobile-menu-nav-item">
-                <a href="./contract.php" class="mobile-menu-link">Контрактное производство</a>
-                <ul class="mobile-submenu">
-                    <li class="mobile-submenu-item"><a href="" class="mobile-submenu-link">Автомобильная химия</a></li>
-                    <li class="mobile-submenu-item"><a href="" class="mobile-submenu-link">Бытовая химия</a></li>
-                    <li class="mobile-submenu-item"><a href="" class="mobile-submenu-link">Дезинфицирующие средства</a>
-                    </li>
-                    <li class="mobile-submenu-item"><a href="" class="mobile-submenu-link">Пищевые аэрозоли</a></li>
-                    <li class="mobile-submenu-item"><a href="" class="mobile-submenu-link">Косметическая продукция</a>
-                    </li>
-                    <li class="mobile-submenu-item"><a href="" class="mobile-submenu-link">Краски аэрозольные</a></li>
-                </ul>
-            </li>
-            <li class="mobile-menu-nav-item"><a href="./services.html" class="mobile-menu-link">Собственные торговые
-                    марки</a></li>
-            <li class="mobile-menu-nav-item"><a href="./news.html" class="mobile-menu-link">Новости</a></li>
-            <li class="mobile-menu-nav-item"><a href="./contact.html" class="mobile-menu-link">Контакты</a></li>
-        </ul>
-
-        <a href="tel:+74996861014" class="mobile-phone">+7 (499) 686-10-14</a>
-        <div class="mobile-info">
-            <svg class="phone-icon" width="24" height="24">
-                <use href="./img/sprite.svg#mark"></use>
-            </svg>
-            <address class="mobile-info-address">г. Мосвка, Холодильный пер. 4к1с8</address>
-        </div>
-        <!-- .mobile-info -->
-        <div class="mobile-info">
-            <svg class="phone-icon" width="24" height="24">
-                <use href="./img/sprite.svg#mail"></use>
-            </svg>
-            <a href="mailto:a.dragunov@tdaliance.ru" class="mobile-info-email">a.dragunov@tdaliance.ru</a>
-        </div>
-        <!-- /.mobile-info -->
-    </div>
+   <?php include_once('mobileMenu.php') ?>
     <!-- /.mobile-menu -->
 
     <nav class="navbar navbar-light">
@@ -75,7 +36,7 @@
             <li class="header-nav-item"><a href="./about.php" class="header-nav-link">О компании</a></li>
             <li class="header-nav-item"><a href="./contract.php" class="header-nav-link">Контрактное производство</a>
             </li>
-            <li class="header-nav-item"><a href="./services.html" class="header-nav-link">Собственные торговые
+            <li class="header-nav-item"><a href="./trademarks.php" class="header-nav-link">Собственные торговые
                     марки</a></li>
             <li class="header-nav-item"><a href="./news.html" class="header-nav-link">Новости</a></li>
             <li class="header-nav-item"><a href="./contact.html" class="header-nav-link">Контакты</a></li>
@@ -110,7 +71,7 @@
 
             <div class="breadcrumbs hero-with-image">
                 <nav class="breadcrumbs">
-                    <a href="./index.html" class="hero-link">Главная</a> — <a href="./contract.php"
+                    <a href="./index.php" class="hero-link">Главная</a> — <a href="./contract.php"
                         class="hero-link">Контрактное производство</a> — <span>Автомобильная химия</span>
                 </nav>
             </div>
@@ -124,64 +85,12 @@
 
 
 
-    <?php include_once('footer.php') ?>
-
-    <div class="modal">
-        <div class="modal-dialog">
-            <h2 class="modal-title">Есть вопросы?</h2>
-            <a href="#" class="modal-close">
-                <svg class="modal-close-icon" width="24" height="24">
-                    <use href="img/sprite.svg#close"></use>
-                </svg>
-            </a>
-            <p class="modal-text">
-                Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время,
-                ответит на все интересующие вопросы и поможет даже в самых сложных случаях!
-            </p>
-
-
-            <form action="#" class="modal-form">
-
-                <div class="input-group-wrapper input-group-vertical">
-                    <div class="input-group modal-input-group">
-                        <input id="modal-user-name" type="text" class="input modal-input" placeholder=" " />
-                        <label class="input-group-label modal-input-label" for="user-name">Имя</label>
-                    </div>
-                    <!-- /.input-group -->
-                    <div class="input-group modal-input-group">
-                        <input id="modal-user-phone" type="tel" class="input modal-input" placeholder=" " />
-                        <label class="input-group-label modal-input-label" for="user-phone">Номер телефона</label>
-                    </div>
-                    <!-- /.input-group -->
-
-
-                </div>
-                <!-- /.input-group-wrapper -->
-                <div class="modal-form-footer">
-                    <button type="submit" class="button modal-form-button">Отправить заявку</button>
-                    <div class="notify">
-                        <svg class="notify-icon">
-                            <use href="img/sprite.svg#shield"></use>
-                        </svg>
-                        <p class="notify-text">
-                            Обращаясь к нам вы получаете не только профессиональную работу, но и абсолютную
-                            конфиденциальность информации!
-                        </p>
-                    </div>
-                </div>
-
-            </form>
-
-
-
-        </div>
-    </div>
+    <?php include_once('./template-parts/footer.php') ?>
 
 
 
 
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/main.js"></script>
+
 
 </body>
 

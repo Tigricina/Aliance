@@ -15,48 +15,9 @@
 </head>
 
 <body class="front-page">
-    <div class="mobile-menu">
-        <ul class="mobile-menu-nav">
-            <li class="mobile-menu-nav-item">
-                <a href="./about.php" class="mobile-menu-link">О компании</a>
-            </li>
-            <li class="mobile-menu-nav-item">
-                <a href="./contract.php" class="mobile-menu-link">Контрактное производство</a>
-                <ul class="mobile-submenu">
-                    <li class="mobile-submenu-item"><a href="./avto_him.php" class="mobile-submenu-link">Автомобильная
-                            химия</a></li>
-                    <li class="mobile-submenu-item"><a href="" class="mobile-submenu-link">Бытовая химия</a></li>
-                    <li class="mobile-submenu-item"><a href="" class="mobile-submenu-link">Дезинфицирующие средства</a>
-                    </li>
-                    <li class="mobile-submenu-item"><a href="" class="mobile-submenu-link">Пищевые аэрозоли</a></li>
-                    <li class="mobile-submenu-item"><a href="" class="mobile-submenu-link">Косметическая продукция</a>
-                    </li>
-                    <li class="mobile-submenu-item"><a href="" class="mobile-submenu-link">Краски аэрозольные</a></li>
-                </ul>
-            </li>
-            <li class="mobile-menu-nav-item"><a href="./services.html" class="mobile-menu-link">Собственные торговые
-                    марки</a></li>
-            <li class="mobile-menu-nav-item"><a href="./news.html" class="mobile-menu-link">Новости</a></li>
-            <li class="mobile-menu-nav-item"><a href="./contact.html" class="mobile-menu-link">Контакты</a></li>
-        </ul>
+<?php 
 
-        <a href="tel:+74996861014" class="mobile-phone">+7 (499) 686-10-14</a>
-        <div class="mobile-info">
-            <svg class="phone-icon" width="24" height="24">
-                <use href="./img/sprite.svg#mark"></use>
-            </svg>
-            <address class="mobile-info-address">г. Мосвка, Холодильный пер. 4к1с8</address>
-        </div>
-        <!-- .mobile-info -->
-        <div class="mobile-info">
-            <svg class="phone-icon" width="24" height="24">
-                <use href="./img/sprite.svg#mail"></use>
-            </svg>
-            <a href="mailto:a.dragunov@tdaliance.ru" class="mobile-info-email">a.dragunov@tdaliance.ru</a>
-        </div>
-        <!-- /.mobile-info -->
-    </div>
-    <!-- /.mobile-menu -->
+include_once('./template-parts/mobileMenu.php') ?>
 
     <nav class="navbar">
         <a href="#" class="mobile-menu-toggle">
@@ -76,7 +37,7 @@
             <li class="header-nav-item"><a href="./about.php" class="header-nav-link">О компании</a></li>
             <li class="header-nav-item"><a href="./contract.php" class="header-nav-link">Контрактное производство</a>
             </li>
-            <li class="header-nav-item"><a href="./services.html" class="header-nav-link">Собственные торговые
+            <li class="header-nav-item"><a href="./trademarks.php" class="header-nav-link">Собственные торговые
                     марки</a></li>
             <li class="header-nav-item"><a href="./news.html" class="header-nav-link">Новости</a></li>
             <li class="header-nav-item"><a href="./contact.html" class="header-nav-link">Контакты</a></li>
@@ -293,43 +254,8 @@
             <!-- /.cards -->
     </section>
 
-    <section class="section trademark">
-        <div class="container">
-            <div class="seporator"></div>
-            <h2 class="section-title">собственные торговые марки</h2>
-            <div class="trademark-cards">
-                <div class="trademark-card">
+    <?php $block_title = "cобственные торговые марки"; include_once('./template-parts/trademarks-block.php')?>
 
-
-                    <svg class="trademark-card-logo">
-                        <use href="./img/sprite.svg#agtech"></use>
-                    </svg>
-
-                    <h3 class="trademark-card-title">Автохимия AG-Tech</h3>
-                    <!-- /.trademark-card-title -->
-                    <p class="trademark-card-text">Для современного мира разбавленное изрядной долей эмпатии,
-                        рациональное мышление создаёт предпосылки для поставленных обществом задач.</p>
-                    <!-- /.trademark-card-text -->
-                </div>
-
-                <div class="trademark-card">
-
-                    <svg class="trademark-card-logo">
-                        <use href="./img/sprite.svg#ap"></use>
-                    </svg>
-                    <h3 class="trademark-card-title">Автохимия AP</h3>
-                    <!-- /.trademark-card-title -->
-                    <p class="trademark-card-text">Для современного мира разбавленное изрядной долей эмпатии,
-                        рациональное мышление создаёт предпосылки для поставленных обществом задач.</p>
-                    <!-- /.trademark-card-text -->
-                </div>
-
-            </div>
-            <!-- /.trademark-cards -->
-
-        </div>
-
-    </section>
 
     <section class="section founder">
         <img src="./img/founder.jpg" alt="founder" class="founder-photo">
@@ -357,7 +283,6 @@
                 <!-- /.founder-content -->
 
             </div>
-
 
         </div>
         <!-- /.container -->
@@ -486,8 +411,6 @@
     </section>
 
 
-
-
     <section class="section blog">
         <div class="container">
             <div class="seporator"></div>
@@ -527,8 +450,6 @@
                 </div>
 
 
-
-
                 <div class="blog-slider-footer">
                     <a href="" class="button-link">Весь блог</a>
                     <!-- navigation buttons -->
@@ -554,15 +475,8 @@
         <!-- /.container-->
     </section>
 
-<?php include_once('footer.php') ?>
-
-
-
-
-
-
+<?php include_once('./template-parts/footer.php') ?>
 
 
 </body>
-
 </html>
