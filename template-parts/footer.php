@@ -151,6 +151,7 @@
         </div>
 
         <hr class="footer-seporator" />
+        <div class="container"> 
         <div class="footer-wrapper">
             <div class="footer-legal">
                 <p class="footer-copyright">
@@ -168,6 +169,7 @@
             <!-- /.footer-author -->
         </div>
         <!-- /.footer-wrapper -->
+         </div>
 
 
 
