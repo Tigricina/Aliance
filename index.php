@@ -17,47 +17,9 @@
 <body class="front-page">
 <?php 
 
-include_once('./template-parts/mobileMenu.php') ?>
+include_once('./template-parts/menu_navbar.php') ?>
 
-    <nav class="navbar">
-        <a href="#" class="mobile-menu-toggle">
-            <div class="mobile-menu-line"></div>
-            <div class="mobile-menu-line"></div>
-            <div class="mobile-menu-line"></div>
-        </a>
-        <a href="./" class="header-logo">
-            <svg class="logo-svg logo-light">
-                <use href="./img/sprite.svg#logo-light"></use>
-            </svg>
-            <svg class="logo-svg logo-dark">
-                <use href="./img/sprite.svg#logo"></use>
-            </svg>
-        </a>
-        <ul class="header-nav">
-            <li class="header-nav-item"><a href="./about.php" class="header-nav-link">О компании</a></li>
-            <li class="header-nav-item"><a href="./contract.php" class="header-nav-link">Контрактное производство</a>
-            </li>
-            <li class="header-nav-item"><a href="./trademarks.php" class="header-nav-link">Собственные торговые
-                    марки</a></li>
-            <li class="header-nav-item"><a href="./news.html" class="header-nav-link">Новости</a></li>
-            <li class="header-nav-item"><a href="./contact.html" class="header-nav-link">Контакты</a></li>
-        </ul>
-        <div class="header-phone">
-            <svg class="phone-icon" width="24" height="24">
-                <use href="img/sprite.svg#phone"></use>
-            </svg>
-            <a href="tel:+74996861014" class="header-phone-link">+7 (499) 686-10-14</a>
-        </div>
-        <!-- /.header-phone -->
-        <button class="navbar-button button" data-toggle="modal">
-            <svg class="button-icon" width="24" height="24">
-                <use href="./img/sprite.svg#phone"></use>
-            </svg>
-            <span class="button-text">Получить консультацию</span>
-        </button>
-    </nav>
-    <!-- /.navbar -->
-
+ 
     <header class="header header-image">
         <div class="container">
             <div class="header-content">
@@ -254,7 +216,9 @@ include_once('./template-parts/mobileMenu.php') ?>
             <!-- /.cards -->
     </section>
 
-    <?php $block_title = "cобственные торговые марки"; include_once('./template-parts/trademarks-block.php')?>
+    <?php 
+    $block_title = "cобственные торговые марки"; 
+    include_once('./template-parts/trademarks-block.php')?>
 
 
     <section class="section founder">

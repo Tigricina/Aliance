@@ -1155,36 +1155,66 @@ body {
     background: #F0F2F5;
 }
 
-.container.hero.hero-with-image {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    height: 16.875rem;
-    /* фиксируем высоту */
-    overflow: hidden;
-    /* обрезаем всё, что выходит за рамки */
+/* Стили для hero с изображением */
+.hero.hero-with-image .hero-content-wrapper {
+    display: flex;
+    align-items: flex-end;
+    /* Прижимаем содержимое к низу */
+    justify-content: space-between;
+    gap: 30px;
+    min-height: 300px;
+    /* Или высота, которая на макете */
     position: relative;
-    padding-right: 90px;
-
-
 }
 
-.hero-content {
-    grid-area: 1 / 1 / 2 / 3;
+.hero.hero-with-image .hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Прижимаем контент к низу */
+    padding-bottom: 20px;
+    /* Отступ снизу, как на макете */
 }
 
-.breadcrumbs.hero-with-image {
-    grid-area: 2 / 1 / 3 / 3;
+.hero.hero-with-image .hero-image-wrapper {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-end;
+    /* Прижимаем изображение к низу */
+    align-self: flex-end;
+    /* Прижимаем контейнер с картинкой к низу */
+    max-width: 50%;
 }
 
-.image.hero-image {
-    grid-area: 1 / 3 / 3 / 5;
-    align-self: end;
-    padding-bottom: 40px;
-    justify-self: end;
+.hero.hero-with-image .hero-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
 
+/* Стили для хлебных крошек */
+.hero.hero-with-image .breadcrumbs {
+    margin-top: 15px;
+    padding-left: 0;
+}
+
+/* Если нужно разместить хлебные крошки на одной линии с картинкой, но под заголовком */
+.hero.hero-with-image .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.image.hero-image img {
+    max-width: 100%;
+    max-height: 100%;
+    /* Заставляет картинку сжаться до высоты родителя */
+    object-fit: contain;
+    /* Или cover, если нужно заполнить всё пространство */
+    display: block;
 }
 
 
@@ -1196,7 +1226,7 @@ body {
     overflow: hidden;
 }
 
-.hero--background::before {
+.hero-background::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -1204,7 +1234,7 @@ body {
     z-index: 1;
 }
 
-.hero--background .container {
+.hero-background .container {
     position: relative;
     z-index: 2;
 
@@ -1481,6 +1511,7 @@ body {
 }
 
 
+
 @media (max-width: 760px) {
     .container {
         max-width: 40rem;
@@ -1502,6 +1533,16 @@ body {
         position: relative;
         width: 100%;
         margin-bottom: 3.125rem;
+    }
+
+    .hero.hero-with-image .hero-content-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero.hero-with-image .hero-image-wrapper {
+        max-width: 100%;
+        align-self: center;
     }
 }
 
