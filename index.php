@@ -184,7 +184,7 @@ include_once('./template-parts/menu_navbar.php') ?>
                             значение форм
                             воздействия.</p>
                         <!-- /.card-text -->
-                        <img src="./img/food-aerosols.png" alt="Пищевые аэрозоли" class="card-image">
+                        <img src="./img/dezinfect.png" alt="Пищевые аэрозоли" class="card-image">
                     </div>
                     <!-- /.card-content -->
                 </a>
@@ -195,7 +195,7 @@ include_once('./template-parts/menu_navbar.php') ?>
                         <!-- /.card-title -->
                         <p class="card-text">Лишь интерактивные прототипы призваны к ответу.</p>
                         <!-- /.card-text -->
-                        <img src="./img/cosmetics.png" alt="Косметическая продукция" class="card-image">
+                        <img src="./img/avto-him.png" alt="Косметическая продукция" class="card-image">
                     </div>
                     <!-- /.card-content -->
                 </a>
@@ -207,7 +207,7 @@ include_once('./template-parts/menu_navbar.php') ?>
                         <p class="card-text">А также стремящиеся вытеснить традиционное производство, нанотехнологии
                             функционально разнесены на независимые элементы.</p>
                         <!-- /.card-text -->
-                        <img src="./img/spray_paints.png" alt="Краски аэрозольные" class="card-image">
+                        <img src="./img/bit-him.png" alt="Краски аэрозольные" class="card-image">
                     </div>
                     <!-- /.card-content -->
                 </a>
