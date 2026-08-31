@@ -36,6 +36,8 @@ include_once('./template-parts/second_topic.php'); ?>
 
 <?php include_once('./template-parts/research_center.php'); ?>
 
+<?php include_once('./template-parts/blog_template.php'); ?>
+
 <?php include_once('./template-parts/clients.php'); ?>
 
 <?php include_once('./template-parts/cta.php'); ?>
