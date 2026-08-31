@@ -177,6 +177,10 @@ include_once('./template-parts/slider_main.php'); ?>
     </section>
 
     <?php 
+    $block_title = "Контрактное производство"; 
+    include_once('./template-parts/contract-block.php')?>
+
+    <?php 
     $block_title = "cобственные торговые марки"; 
     include_once('./template-parts/trademarks-block.php')?>
 
