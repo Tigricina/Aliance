@@ -896,7 +896,10 @@ body {
 }
 
 .footer-menu-column-2 {
-    columns: 20rem auto;
+    column-count: 2;
+    column-gap: 8.125rem;
+    /* Расстояние между колонками */
+
 }
 
 .footer-menu-link {
@@ -918,8 +921,12 @@ body {
     margin-bottom: 1.875rem;
 }
 
+.footer-menu-wrapper {
+    margin-right: 8.1875rem;
+}
+
 .footer-menu-wrapper:last-child {
-    margin-left: 5rem;
+    /*margin-left: 5rem;*/
 }
 
 .footer-wrapper {
