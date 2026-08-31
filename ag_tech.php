@@ -14,7 +14,7 @@ $breadcrumbs = [
 include_once('./template-parts/menu_navbar.php'); ?>
 <?php include_once('./template-parts/header-page.php'); ?>
 
-
+<?php include_once('./template-parts/cta.php'); ?>
 <?php include_once('./template-parts/footer.php'); ?>
 
 

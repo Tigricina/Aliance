@@ -40,6 +40,7 @@ include_once('./template-parts/second_topic.php'); ?>
 <?php include_once('./template-parts/research_center.php'); ?>
 <?php include_once('./template-parts/work_scheme.php')?>
 <?php include_once('./template-parts/clients.php'); ?>
+<?php include_once('./template-parts/cta.php'); ?>
 <?php include_once('./template-parts/footer.php'); ?>
 
 

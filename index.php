@@ -45,86 +45,7 @@ include_once('./template-parts/slider_main.php'); ?>
  
      <?php include_once('./template-parts/work_scheme.php')?>
 
-    <section class="section production">
-        <div class="container">
-            <div class="seporator"></div>
-            <h2 class="section-title">Контрактное производство</h2>
-            <div class="cards">
-                <a href="./avto_him.php" class="card">
-                    <div class="card-content">
-                        <h3 class="card-title">Автомобильная химия</h3>
-                        <!-- /.card-title -->
-                        <p class="card-text">Безусловно, сплочённость команды профессионалов позволяет оценить значение
-                            форм
-                            воздействия.</p>
-                        <!-- /.card-text -->
-                        <img src="./img/avto-him.png" alt="Автомобильная химия" class="card-image">
-                    </div>
-                    <!-- /.card-content -->
-                </a>
-                <!-- /.card -->
-
-                <a href="#" class="card">
-                    <div class="card-content">
-                        <h3 class="card-title">Бытовая химия</h3>
-                        <!-- /.card-title -->
-                        <p class="card-text">А также стремящиеся вытеснить традиционное производство, нанотехнологии
-                            функционально разнесены на независимые элементы.</p>
-                        <!-- /.card-text -->
-                        <img src="./img/bit-him.png" alt="Бытовая химия" class="card-image">
-                    </div>
-                    <!-- /.card -->
-                </a>
-                <a href="#" class="card">
-                    <div class="card-content">
-                        <h3 class="card-title">Дезинфицирующие средства</h3>
-                        <!-- /.card-title -->
-                        <p class="card-text">Лишь интерактивные прототипы призваны к ответу.</p>
-                        <!-- /.card-text -->
-                        <img src="./img/dezinfect.png" alt="Дезинфицирующие средства" class="card-image">
-                    </div>
-                    <!-- /.card-content -->
-                </a>
-                <!-- /.card -->
-                <a href="#" class="card">
-                    <div class="card-content">
-                        <h3 class="card-title">Пищевые аэрозоли</h3>
-                        <!-- /.card-title -->
-                        <p class="card-text">Безусловно, сплочённость команды профессионалов позволяет оценить
-                            значение форм
-                            воздействия.</p>
-                        <!-- /.card-text -->
-                        <img src="./img/dezinfect.png" alt="Пищевые аэрозоли" class="card-image">
-                    </div>
-                    <!-- /.card-content -->
-                </a>
-                <!-- /.card -->
-                <a href="#" class="card">
-                    <div class="card-content">
-                        <h3 class="card-title">Косметическая продукция</h3>
-                        <!-- /.card-title -->
-                        <p class="card-text">Лишь интерактивные прототипы призваны к ответу.</p>
-                        <!-- /.card-text -->
-                        <img src="./img/avto-him.png" alt="Косметическая продукция" class="card-image">
-                    </div>
-                    <!-- /.card-content -->
-                </a>
-                <!-- /.card -->
-                <a href="#" class="card">
-                    <div class="card-content">
-                        <h3 class="card-title">Краски аэрозольные</h3>
-                        <!-- /.card-title -->
-                        <p class="card-text">А также стремящиеся вытеснить традиционное производство, нанотехнологии
-                            функционально разнесены на независимые элементы.</p>
-                        <!-- /.card-text -->
-                        <img src="./img/bit-him.png" alt="Краски аэрозольные" class="card-image">
-                    </div>
-                    <!-- /.card-content -->
-                </a>
-                <!-- /.card -->
-            </div>
-            <!-- /.cards -->
-    </section>
+   
 
     <?php 
     $block_title = "Контрактное производство"; 
@@ -143,8 +64,8 @@ include_once('./template-parts/slider_main.php'); ?>
 
 <?php include_once('./template-parts/blog-slider.php'); ?>
 
-
-<?php include_once('./template-parts/footer.php') ?>
+<?php include_once('./template-parts/cta.php'); ?>
+<?php include_once('./template-parts/footer.php'); ?>
 
 
 </body>

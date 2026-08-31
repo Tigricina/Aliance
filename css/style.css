@@ -671,6 +671,24 @@ body {
     justify-content: space-between;
 }
 
+.blog-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blog-wrapper>.blog-card {
+
+    max-width: 44.0625rem;
+
+    margin-bottom: 1.875rem;
+    flex-basis: 50%;
+
+
+}
+
+
+
 .bg-grey {
     background: #f0f2f5;
     /*
@@ -1139,10 +1157,10 @@ body {
     color: #292D33;
 }
 
-.container.hero {
+/*.container.hero {
     padding-left: 5.625rem;
 
-}
+}*/
 
 .hero-content {
 
@@ -1305,6 +1323,19 @@ body {
     margin-right: 100px;
 }
 
+.blog--gallery .swiper-slide.blog-card {
+    width: 25%;
+    /* Показываем 4 элемента */
+    height: 300px;
+}
+
+/* Скрываем заголовок и текст, а также основной заголовок секции */
+.blog--gallery .seporator,
+.blog--gallery .section-title,
+.blog--gallery .blog-card-title,
+.blog--gallery .blog-card-text {
+    display: none;
+}
 
 
 @media (max-width: 1700px) {

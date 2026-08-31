@@ -79,7 +79,7 @@
             </li>
             <li class="header-nav-item"><a href="./trademarks.php" class="header-nav-link">Собственные торговые
                     марки</a></li>
-            <li class="header-nav-item"><a href="./news.html" class="header-nav-link">Новости</a></li>
+            <li class="header-nav-item"><a href="./blog.php" class="header-nav-link">Новости</a></li>
             <li class="header-nav-item"><a href="./contact.html" class="header-nav-link">Контакты</a></li>
         </ul>
         <div class="header-phone">

@@ -38,6 +38,7 @@ include_once('./template-parts/second_topic.php'); ?>
 
 <?php include_once('./template-parts/clients.php'); ?>
 
+<?php include_once('./template-parts/cta.php'); ?>
 <?php include_once('./template-parts/footer.php'); ?>
 
 
