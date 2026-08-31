@@ -9,7 +9,14 @@
                                             
                         <h2 class="section-title"> <?php echo $topic_title ?> </h2>
                         <p class="topic-text"><?php echo $topic_text ?> </p>
-                        <p class="topic-text"><?php echo $topic_text2 ?> </p>
+
+                            <?php 
+            if (!empty($block_title)) {
+               
+                echo '<p class="topic-text"><?php echo $topic_text2 ?> </p>';
+            }
+            ?>
+                       
                         
                     </div>
                     <!-- /.topic-content -->
