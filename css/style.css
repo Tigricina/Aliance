@@ -1260,6 +1260,40 @@ body {
     color: #fff;
 }
 
+.first-topic-wrapper,
+.second-topic-wrapper {
+    display: flex;
+}
+
+.first-topic {
+    max-width: 30rem;
+    max-height: 30rem;
+    margin-right: 120px;
+}
+
+.topic-text {
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 160%;
+    color: #828a99;
+}
+
+.second-topic {
+    margin-left: 7.5rem;
+}
+
+.research-center-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.research {
+    margin-right: 100px;
+}
+
+
 
 @media (max-width: 1700px) {
     html {
