@@ -1,7 +1,10 @@
             <!-- Основной блок слайдера Slider main container -->
+           
+           
+           
             <div class="swiper features-slider">
                 <!-- Обёртка слайдера Additional required wrapper -->
-                <ul class="swiper-wrapper header-features">
+                <ul class="swiper-wrapper <?= $slider_style;?>">
                     <!-- Слайды Slides -->
                     <li class="swiper-slide header-features-item"><svg width="36" height="36">
                             <use href="./img/sprite.svg#time"></use>
@@ -43,3 +46,4 @@
                 <!-- slider-buttons -->
 
             </div>
+       

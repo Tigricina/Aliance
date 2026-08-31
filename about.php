@@ -16,10 +16,12 @@ $topic_text = 'Разнообразный и богатый опыт говор�
 $topic_image = '../img/experts.png'; 
 $image_alt = 'experts';
 
-
-
 include_once('./template-parts/first_topic.php'); ?>
-<?php include_once('./template-parts/slider_main.php'); ?>
+<div class="container">
+<?php 
+$slider_style = "dark-features-slider";
+include_once('./template-parts/slider_main.php'); ?>
+</div>
 <?php 
 $topic_title = 'Наше производство';
 $topic_text = 'Предварительные выводы неутешительны: разбавленное изрядной долей эмпатии, рациональное мышление обеспечивает широкому кругу (специалистов) участие в формировании глубокомысленных рассуждений. Но граница обучения кадров создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса кластеризации усилий.';

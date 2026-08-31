@@ -31,9 +31,14 @@ include_once('./template-parts/menu_navbar.php') ?>
             </div>
             <!-- /.header-content -->
 
-<?php include_once('./template-parts/slider_main.php'); ?>
+            
 
-        </div>
+<?php 
+
+$slider_style = "header-features";
+include_once('./template-parts/slider_main.php'); ?>
+
+             </div>
         <!-- /.container-->
     </header>
 
