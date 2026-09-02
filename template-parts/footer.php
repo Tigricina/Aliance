@@ -1,5 +1,3 @@
-
-
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
@@ -53,7 +51,7 @@
             <div class="footer-bottom">
                 <div class="footer-menu-wrapper">
                     <h2 class="footer-menu-title">Контрактное производство</h2>
-                    <ul class="footer-menu-list footer-menu-column-2">
+                    <ul class="footer-menu-list footer-menu-column-2 deep">
                         <li class="footer-menu-item">
                             <a href="./avto_him.php" class="footer-menu-link">Автомобильная химия</a>
                         </li>
@@ -77,7 +75,7 @@
                 <!-- /.footer-menu-wrapper -->
                 <div class="footer-menu-wrapper">
                     <h2 class="footer-menu-title">Собственные марки</h2>
-                    <ul class="footer-menu-list">
+                    <ul class="footer-menu-list deep">
                         <li class="footer-menu-item">
                             <a href="./ag_tech.php" class="footer-menu-link">Автохимия AG-Tech</a>
                         </li>
